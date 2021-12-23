@@ -28,9 +28,9 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")] // http verbs -> get post delete put
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public ActionResult<Product> GetProduct(int id)
         {
-            return await _context.Products.FindAsync(id);
+            return  _context.Products.Find(id);
         }
 
     }
